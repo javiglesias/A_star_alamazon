@@ -1,0 +1,6 @@
+[package]
+name = "alamazon"
+version = "0.1.0"
+authors = ["javiglesias <javiglesias@outlook.com>"]
+
+[dependencies]
