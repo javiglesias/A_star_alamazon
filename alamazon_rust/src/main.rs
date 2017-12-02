@@ -2,10 +2,19 @@ use std::io;
 use std::cell::Cell;
 mod lib;
 use std::default;
+fn read_number() -> u32{
+    let mut tmp:String = String::new();
+    io::stdin().read_line(&mut tmp).expect("failed to read input.");
+    let tmp2 = tmp.trim();
+    match tmp2.parse::<u32>() {
+        Ok(i) => return (i),
+        Err(..) => return 0,
+    };
+}
 fn a_star() {
     println!("calling a_star...");
 }
-fn start_db(mut o:[String; 3], mut n:[i32;3]) {
+fn start_db(mut o:[String; 3], mut n:[u32;3]) {
     let mut db:[lib::object;14] = Default::default();
     db[0].name = o[0].clone();
     db[0].quantity = n[0];
@@ -19,7 +28,7 @@ fn start_db(mut o:[String; 3], mut n:[i32;3]) {
 }
 fn main() {
     let mut objects: [String; 3] = Default::default();
-    let mut quantity: [i32;3] = Default::default();
+    let mut quantity: [u32;3] = Default::default();
     let mut tmp:String = String::new();
     let mut c=0;
     loop {
@@ -29,8 +38,9 @@ fn main() {
             println!("Introduce object {} name: ",c);
             io::stdin().read_line(&mut objects[c]);
              println!("Introduce object {} quatity: ",c);
-            io::stdin().read_line(&mut tmp).expect("Error i32 input");
-            quantity[c] = tmp.parse::<i32>().unwrap_or(200); //FAIL!
+            //io::stdin().read_line(&mut tmp).expect("Error i32 input");
+            quantity[c] = read_number();
+            // tmp.parse::<i32>().unwrap_or(200); //FAIL!
             c = c+1;
         }
     }

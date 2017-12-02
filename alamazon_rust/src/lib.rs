@@ -50,7 +50,7 @@ impl node {
 #[derive(Default)]
 pub struct object {
     pub name:String,
-    pub quantity:i32,
+    pub quantity:u32,
 }
 pub struct state {
     position:node,
