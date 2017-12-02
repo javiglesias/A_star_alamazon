@@ -1,1 +1,1 @@
-J:\Personal\ Projects\RustProjects\A_star_alamazon\alamazon_rust\target\debug\alamazon-6124f7cfbcfe5657.exe: J:\Personal\ Projects\RustProjects\A_star_alamazon\alamazon_rust\src\main.rs J:\Personal\ Projects\RustProjects\A_star_alamazon\alamazon_rust\src\lib.rs
+J:\Personal\ Projects\RustProjects\A_star_alamazon\alamazon_rust\target\debug\alamazon-6124f7cfbcfe5657.exe: J:\Personal\ Projects\RustProjects\A_star_alamazon\alamazon_rust\src\lib.rs J:\Personal\ Projects\RustProjects\A_star_alamazon\alamazon_rust\src\main.rs
