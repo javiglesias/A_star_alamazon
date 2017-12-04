@@ -12,11 +12,6 @@ fn read_number() -> u32{
     };
 }
 fn a_star() {
-    /*
-     *h(n)=minimum distance from my node to the Finish node, getting all the objects.
-     OR
-     *h(n)=minimum distance from my node to the next node where i need to get an object.
-     * */
     println!("calling a_star...");
 }
 fn start_db() {

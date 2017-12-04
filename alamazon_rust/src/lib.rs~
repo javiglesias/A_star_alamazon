@@ -30,9 +30,23 @@ pub  struct node {
     pleft:Option<Box<node>>,
 }
 impl node {
-    /*Here goes the functions that calculate the h, f and g of each node*/
-}
+    pub fn setg() {
 
+    }
+     pub fn seth() {
+
+    }
+    pub fn setf() {
+
+    }
+    pub fn calculatef(mut self)->i32 {
+        self.f = self.g + self.h;
+        return self.f;
+    }
+    pub  fn updateH(mut self) {
+        self.h = self.h+1;
+    }
+}
 #[derive(Default)]
 pub struct object {
     pub name:String,
