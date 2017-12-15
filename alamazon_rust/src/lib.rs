@@ -23,7 +23,7 @@ pub struct object {
     pub name:String,
     pub quantity:u32,
 }
-#[derive(Clone, Debug)]
+#[derive(Clone, Debug, Copy)]
 pub struct _shelving {
     /*this are the shelving nodes*/
     g:i32,
@@ -55,3 +55,8 @@ impl node {
     /*Here goes the functions that calculate the h, f and g of each node*/
     fn print(&self) { println!("node: {}",self.g); }
 }
+#[derive(Debug,Default,Clone)]
+pub struct universe {
+    pub sh:[_shelving;8], //number of shelvings in the map
+    pub cr:[node; 6],//number of crosses in the map
+} 

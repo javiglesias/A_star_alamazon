@@ -19,7 +19,7 @@ fn a_star() {
      * */
     println!("calling a_star...");
 }
-fn start_db() {
+fn start_db() ->[lib::object; 14]{
     let mut db:[lib::object;14] = Default::default();
     db[0].name = String::from("Patatas");
     db[0].quantity = 200;
@@ -52,6 +52,11 @@ fn start_db() {
     println!("initialized: {} with {}",db[0].name, db[0].quantity);
     println!("initialized: {} with {}",db[10].name, db[10].quantity);
     println!("initialized: {} with {}",db[12].name, db[12].quantity);
+    return db;
+}
+fn connect() {
+    /*this function has to connect every shelving with every cross and every cross with every cross*/
+    let mut _u: lib::universe = Default::default();
 }
 fn main() {
     let mut objects: [String; 3] = Default::default();
@@ -60,6 +65,7 @@ fn main() {
     let mut c=0;
     let mut open:[lib::node; 8];//open options for A*
     let mut closed:[lib::node; 8];//closed states of A*
+    let mut db:[lib::object;14];
    /* loop {
         if(c == 3) {
             break;
@@ -74,5 +80,5 @@ fn main() {
         }
     }*/
     a_star();
-    start_db();
+    db = start_db();
 }
